@@ -182,12 +182,10 @@ local function missle_class()
   end
 
   function self:initialize()
-    local x = 0
-    local y = 3
     floatingCommand{
       name = "launch " .. self.name,
-      x = x,
-      y = y,
+      x = self.x,
+      y = self.y,
       action = function()
         self:action()
       end,
@@ -310,6 +308,8 @@ end
 
 local function EOS_controller_class()
   local self = missle_class()
+  self.x = 438
+  self.y = 38
   self.name = "tacnuke"
   self.cmd = 39610
   self.markerMessage = "Launching EOS"
@@ -344,6 +344,8 @@ end
 
 local function seismic_controller_class()
   local self = missle_class()
+  self.x = 482
+  self.y = 38
   self.name = "seismic"
   self.cmd = 39611
 
@@ -370,6 +372,8 @@ end
 
 local function shockley_controller_class()
   local self = missle_class()
+  self.x = 526
+  self.y = 38
   self.name = "empmissile"
   self.cmd = 39612
   self.markerMessage = "Launching Shockley"
@@ -397,6 +401,8 @@ end
 
 local function inferno_controller_class()
   local self = missle_class()
+  self.x = 570
+  self.y = 38
   self.name = "napalmmissile"
   self.cmd = 39613
   self.markerMessage = "Launching Inferno"
@@ -424,6 +430,8 @@ end
 
 local function reef_missile_controller_class()
   local self = missle_class()
+  self.x = 394
+  self.y = 38
   self.name = "shipcarrier"
   self.cmd = 39614
   self.cmdType = CMDTYPE.ICON_UNIT_OR_MAP
@@ -444,6 +452,8 @@ end
 
 local function trinity_missile_controller_class()
   local self = missle_class()
+  self.x = 350
+  self.y = 38
   self.name = "staticnuke"
   self.cmd = 39615
   self.markerMessage = "Launching trinity missile"

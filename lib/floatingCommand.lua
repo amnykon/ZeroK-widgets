@@ -11,27 +11,13 @@ function floatingCommand(obj)
   local screenWidth, screenHeight = Spring.GetViewGeometry()
   local size = 45
 
-  local x
-  if obj.x < 0 then
-    x = obj.x * size + screenWidth
-  else
-    x = obj.x * size
-  end
-
-  local y
-  if obj.y < 0 then
-    y = obj.y * size + screenHeight
-  else
-    y = obj.y * size
-  end
-
   local window = WG.Chili.Window:New{
     name = obj.name,
     parent = WG.Chili.Screen0,
     padding = {-1, 0, -1, -1},
     itemMargin = {0, 0, 0, 0},
-    x = x,
-    y = y,
+    x = obj.x,
+    y = obj.y,
     width  = size,
     height = size,
     dockable  = true,
